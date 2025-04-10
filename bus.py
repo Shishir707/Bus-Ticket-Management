@@ -35,6 +35,7 @@ while choice!=0:
     print("🎫 What would you like to do?")
     print("1️⃣  Show Available Seats")
     print("2️⃣  Book a Ticket")
+    print("3️⃣  Check Specific Ticket Details")
     print("0️⃣  Exit")
     print("\n" + "="*40)
     choice = int(input("👉 Select Option: "))
@@ -68,6 +69,25 @@ while choice!=0:
                 print("ℹ️  Use Option 1 to check available seats.")
                 print("         " + "="*20)
                 break
+    elif choice == 3:
+        print("\n🔍 Ticket Details:")
+        tic = int(input("Enter seat no:"))
+        if tic>b or tic<=0 or buslist[tic-1][2] is None:
+            print("⚠️ Enter Seat Number Correctly!")
+        elif tic<=b:
+            name=input("Enter Your Name:")
+            if buslist[tic-1][2]==name:
+                for i in range(b):
+                    print(f"\n🎟Ticket Information for {name}:")
+                    print(f"🪑 Seat Number: {buslist[tic-1][0]}")
+                    print(f" ⃣ Serial Number: {buslist[tic-1][1]}")
+                    print(f"💵 Ticket Price: {buslist[tic-1][3]} tk")
+                    print(">> Thank you for booking with us!")
+                    print("         " + "="*20)
+                    break
+            else:
+                print("Information doesn't match.Please Try again!")
+                print("         " + "="*20)
 
     elif(choice == 0):
         exit()
