@@ -36,3 +36,15 @@ while choice!=0:
     print("0️⃣  Exit")
     print("\n" + "="*40)
     choice = int(input("👉 Select Option: "))
+
+    if choice==1:
+        count=0
+        for i in range(b):
+            if buslist[i][2]==None:
+                count+=1
+                print(f"✅ Seat Name: {buslist[i][0]} | Serial No: {buslist[i][1]}")
+        print(f"\n🟢 Total Available Seats: {count}")
+        print("         " + "="*20)
+
+    elif(choice == 0):
+        exit()
