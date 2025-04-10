@@ -19,3 +19,20 @@ buslist = [["A1",1,None,2000,None],
            ["E2",18,None,2000,None],
            ["E3",19,None,2000,None],
            ["E4",20,None,2000,None]]
+#Journey info
+info=["Dhaka","Jashore","Khulna","08:00 AM", "11:00 AM", "12:00 PM"]
+
+print("====================================")
+print("     🚌 Welcome to Bus Service 🚌    ")
+print("====================================")
+b=len(buslist)
+
+choice=-1
+while choice!=0:
+    
+    # Display the menu for book and cancel ticket
+    print("🎫 What would you like to do?")
+    print("1️⃣  Show Available Seats")
+    print("0️⃣  Exit")
+    print("\n" + "="*40)
+    choice = int(input("👉 Select Option: "))
