@@ -1,3 +1,4 @@
+import time
 #[Seat_Name, Serial, Passenger_Name,Price,Passward]
 buslist = [["A1",1,None,2000,None],
            ["A2",2,"Fahim",2000,1234],
@@ -33,6 +34,7 @@ while choice!=0:
     # Display the menu for book and cancel ticket
     print("🎫 What would you like to do?")
     print("1️⃣  Show Available Seats")
+    print("2️⃣  Book a Ticket")
     print("0️⃣  Exit")
     print("\n" + "="*40)
     choice = int(input("👉 Select Option: "))
@@ -45,6 +47,27 @@ while choice!=0:
                 print(f"✅ Seat Name: {buslist[i][0]} | Serial No: {buslist[i][1]}")
         print(f"\n🟢 Total Available Seats: {count}")
         print("         " + "="*20)
+
+    elif choice == 2:
+        tic = int(input(f"Enter Seat No(1-{b}):"))
+        f=tic-1
+        for i in range(b):
+            if buslist[f][2]==None:
+                a=input("Enter Passenger Name:")
+                otp=int(input("Enter 4 digit passward for Security:"))
+                buslist[f][2]=a
+                print("\n📝 Booking Ticket is Processing...")
+                buslist[f][4]=otp
+                time.sleep(2)
+                print(f"🎉 Seat {buslist[f][0]} successfully booked for {a}!")
+                print(f"You have to pay TK BDT.{buslist[f][3]}")
+                print("         " + "="*20)
+                break
+            else:
+                print("❌ This seat is already booked.")
+                print("ℹ️  Use Option 1 to check available seats.")
+                print("         " + "="*20)
+                break
 
     elif(choice == 0):
         exit()
