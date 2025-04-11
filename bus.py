@@ -1,29 +1,30 @@
 from datetime import date
+from datetime import datetime
 import time
-#[Seat_Name, Serial, Passenger_Name,Price,Passward]
-buslist = [["A1",1,None,2000,None],
-           ["A2",2,"Fahim",2000,1234],
-           ["A3",3,None,2000,None],
-           ["A4",4,None,2000,None],
-           ["B1",5,"Nirob",2000,1234],
-           ["B2",6,"Faraf",2000,2345],
-           ["B3",7,None,2000,None],
-           ["B4",8,"Avro",2000,3456],
-           ["C1",9,"Nibir",2000,4567],
-           ["C2",10,"Sakib",2000,5678],
-           ["C3",11,"Sultan",2000,6789],
-           ["C4",12,"Fahad",2000,1234],
-           ["D1",13,"Nayem",2000,2345],
-           ["D2",14,None,2000,None],
-           ["D3",15,"Rakib",2000,2580],
-           ["D4",16,None,2000,None],
-           ["E1",17,None,2000,None],
-           ["E2",18,None,2000,None],
-           ["E3",19,None,2000,None],
-           ["E4",20,None,2000,None]]
-#Journey info
+#[seatName, Serial, passengerName,Price,Passward,bookDate, bookTime]
+buslist = [["A1",1,None,2000,None,None,None],
+           ["A2",2,"Fahim",2000,1234,"2025-04-10","10:10"],
+           ["A3",3,None,2000,None,None,None],
+           ["A4",4,None,2000,None,None,None],
+           ["B1",5,"Nirob",2000,1234,"2025-04-09","10:50"],
+           ["B2",6,"Faraf",2000,2345,"2025-04-07","08:07"],
+           ["B3",7,None,2000,None,None,None],
+           ["B4",8,"Avro",2000,3456,"2025-04-05","10:08"],
+           ["C1",9,"Nibir",2000,4567,"2025-04-01","08:10"],
+           ["C2",10,"Sakib",2000,5678,"2025-04-11","10:02"],
+           ["C3",11,"Sultan",2000,6789,"2025-04-03","07:04"],
+           ["C4",12,"Fahad",2000,1234,"2025-04-05","15:02"],
+           ["D1",13,"Nayem",2000,2345,"2025-04-02","17:19"],
+           ["D2",14,None,2000,None,None,None],
+           ["D3",15,"Rakib",2000,2580,"2025-04-10","20:25"],
+           ["D4",16,None,2000,None,None,None],
+           ["E1",17,None,2000,None,None,None],
+           ["E2",18,None,2000,None,None,None],
+           ["E3",19,None,2000,None,None,None],
+           ["E4",20,None,2000,None,None,None]]
 info=["Dhaka","Jashore","Khulna","08:00 AM", "11:00 AM", "12:00 PM"]
 today = date.today()
+now = datetime.now().strftime("%H:%M")
 
 print("====================================")
 print("     🚌 Welcome to Bus Service 🚌    ")
