@@ -42,6 +42,7 @@ while choice!=0:
     print("5️⃣  Download Your Ticket")
     print("6️⃣  Cancel a Ticket")
     print("7️⃣  Check All Ticket Status")
+    print("8️⃣  All Information")
     print("0️⃣  Exit")
     print("\n" + "="*40)
     choice = int(input("👉 Select Option:"))
@@ -179,6 +180,14 @@ while choice!=0:
         if flag==True:
             print(f"\n 🟩Total Available Seats: {count} || 🟥Sold Out seats:{b-count}")
         print("         " + "="*20)
+
+    elif choice == 8:
+        print("N.B: Only admin can see this info.")
+        a=input("Enter passward to see information:")
+        if a=="admin":
+            print(buslist)
+        else:
+            print("⚠ Wrong Password")
 
     elif(choice == 0):
         exit()
