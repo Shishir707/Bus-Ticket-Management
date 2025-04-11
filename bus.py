@@ -37,9 +37,10 @@ while choice!=0:
     print("2️⃣  Book a Ticket")
     print("3️⃣  Check Specific Ticket Details")
     print("4️⃣  Journey Details")
+    print("5️⃣  Download Your Ticket")
     print("0️⃣  Exit")
     print("\n" + "="*40)
-    choice = int(input("👉 Select Option: "))
+    choice = int(input("👉 Select Option:"))
 
     if choice==1:
         count=0
@@ -103,6 +104,8 @@ while choice!=0:
         print("📍 Please arrive at the terminal at least 15 minutes early.")
         print("Thank you for choosing Green Line!")
         print("         " + "="*20)
+
+    
 
     elif(choice == 0):
         exit()
