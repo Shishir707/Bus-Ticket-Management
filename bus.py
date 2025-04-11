@@ -156,6 +156,8 @@ while choice!=0:
                 print("         " + "="*20)
                 buslist[tic-1][2] = None
                 buslist[tic-1][4] = None
+                buslist[tic-1][5] = None
+                buslist[tic-1][6] = None
                 break
         if flag==False:
             print("⚠ OTP Didn't Match!")
