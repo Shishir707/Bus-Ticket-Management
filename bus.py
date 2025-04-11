@@ -41,6 +41,7 @@ while choice!=0:
     print("4️⃣  Journey Details")
     print("5️⃣  Download Your Ticket")
     print("6️⃣  Cancel a Ticket")
+    print("7️⃣  Check All Ticket Status")
     print("0️⃣  Exit")
     print("\n" + "="*40)
     choice = int(input("👉 Select Option:"))
@@ -51,6 +52,7 @@ while choice!=0:
             if buslist[i][2]==None:
                 count+=1
                 print(f"✅ Seat Name: {buslist[i][0]} | Serial No: {buslist[i][1]}")
+
         print(f"\n🟢 Total Available Seats: {count}")
         print("         " + "="*20)
 
@@ -154,6 +156,29 @@ while choice!=0:
         if flag==False:
             print("⚠ OTP Didn't Match!")
     
+    elif choice == 7:
+        print("N.B: Only admin can see this info.")
+        a=input("Enter passward to see information:")
+        flag=False
+        if a=="admin":
+            flag=True
+            count=0
+            print("\n🧾 All Ticket Status:")
+            status="Availabe"
+            for i in range(b):
+                if buslist[i][2] is None:
+                    count+=1
+                    status="Availabe"
+                    print(f"🟩 {buslist[i][0]} | Serial: {buslist[i][1]} | Status: {status}")
+                else:
+                    status=f"Booked by {buslist[i][2]}"
+                    print(f"🟥 {buslist[i][0]} | Serial: {buslist[i][1]} | Status: {status}")
+        else:
+            print("⚠ Wrong Password")
+    
+        if flag==True:
+            print(f"\n 🟩Total Available Seats: {count} || 🟥Sold Out seats:{b-count}")
+        print("         " + "="*20)
 
     elif(choice == 0):
         exit()
