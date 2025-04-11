@@ -93,6 +93,7 @@ while choice!=0:
                     print(f"🪑 Seat Number: {buslist[tic-1][0]}")
                     print(f" ⃣ Serial Number: {buslist[tic-1][1]}")
                     print(f"💵 Ticket Price: {buslist[tic-1][3]} tk")
+                    print(f"Booking Date   : {(buslist[i][5])}║{buslist[i][6]} ")
                     print(">> Thank you for booking with us!")
                     print("         " + "="*20)
                     break
