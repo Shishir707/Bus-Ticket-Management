@@ -185,7 +185,7 @@ while choice!=0:
             print("⚠ Wrong Password")
     
         if flag==True:
-            print(f"\n 🟩Total Available Seats: {count} || 🟥Sold Out seats:{b-count}")
+            print(f"\n 🟩 Total Available Seats: {count} || 🟥 Sold Out seats:{b-count}")
         print("         " + "="*20)
 
     elif choice == 8:
@@ -197,4 +197,5 @@ while choice!=0:
             print("⚠ Wrong Password")
 
     elif(choice == 0):
+        print("✉️  Thanks for choosing us!")
         exit()
