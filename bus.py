@@ -93,7 +93,7 @@ while choice!=0:
                     print(f"🪑 Seat Number: {buslist[tic-1][0]}")
                     print(f" ⃣ Serial Number: {buslist[tic-1][1]}")
                     print(f"💵 Ticket Price: {buslist[tic-1][3]} tk")
-                    print(f"Booking Date   : {(buslist[i][5])}║{buslist[i][6]} ")
+                    print(f"Booking Date   : {(buslist[tic-1][5])}║{buslist[tic-1][6]} ")
                     print(">> Thank you for booking with us!")
                     print("         " + "="*20)
                     break
@@ -145,7 +145,7 @@ while choice!=0:
     elif choice == 6:
         print("\n🗑 Cancel a Ticket")
         tic = int(input("🎫 Enter Seat Number to Cancel: "))
-        otp=input("Enter Your 4 digit passward:")
+        otp=int(input("Enter Your 4 digit passward:"))
         flag=False
         for i in range(b):
             if buslist[tic-1][4]==otp:
