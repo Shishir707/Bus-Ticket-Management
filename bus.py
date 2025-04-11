@@ -1,3 +1,4 @@
+from datetime import date
 import time
 #[Seat_Name, Serial, Passenger_Name,Price,Passward]
 buslist = [["A1",1,None,2000,None],
@@ -22,6 +23,7 @@ buslist = [["A1",1,None,2000,None],
            ["E4",20,None,2000,None]]
 #Journey info
 info=["Dhaka","Jashore","Khulna","08:00 AM", "11:00 AM", "12:00 PM"]
+today = date.today()
 
 print("====================================")
 print("     🚌 Welcome to Bus Service 🚌    ")
@@ -61,7 +63,7 @@ while choice!=0:
                 buslist[f][2]=a
                 print("\n📝 Booking Ticket is Processing...")
                 buslist[f][4]=otp
-                time.sleep(2)
+                time.sleep(0.5)
                 print(f"🎉 Seat {buslist[f][0]} successfully booked for {a}!")
                 print(f"You have to pay TK BDT.{buslist[f][3]}")
                 print("         " + "="*20)
@@ -105,6 +107,31 @@ while choice!=0:
         print("Thank you for choosing Green Line!")
         print("         " + "="*20)
 
+    elif choice ==5:
+        name=input("Enter User Name:")
+        pas= int(input("Enter Your Passward:"))
+        flag=False
+        for i in range(b):
+            if buslist[i][2]==name and buslist[i][4]==pas:
+                flag=True
+                print("Downloading...")
+                time.sleep(0.5)
+                print(f"----------------------")
+                print(f"     Green Line        ")
+                print(" " + "="*20)
+                print(f"Passenger Name : {buslist[i][2]}")
+                print(f"Seat No.       : {buslist[i][0]}")
+                print(f"Journey Date   : {today}")
+                print(f"Departure      : {info[0]}")
+                print(f"Destination    : {info[2]}")
+                print(f"Departure Time : {info[3]}")
+                print(f"Ticket No.     : {buslist[i][1]}")
+                print(f"Fare           : BDT.{buslist[i][3]}")
+                print(f"----------------------")
+                print("Have a safe journey!")
+                break
+        if flag==False:
+            print("⚠ invalid username & passward")
     
 
     elif(choice == 0):
