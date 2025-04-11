@@ -133,6 +133,7 @@ while choice!=0:
                 print(f"Destination    : {info[2]}")
                 print(f"Departure Time : {info[3]}")
                 print(f"Ticket No.     : {buslist[i][1]}")
+                print(f"Booking Date   : {(buslist[i][5])}║{buslist[i][6]} ")
                 print(f"Fare           : BDT.{buslist[i][3]}")
                 print(f"----------------------")
                 print("Have a safe journey!")
