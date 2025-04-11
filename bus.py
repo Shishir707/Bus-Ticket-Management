@@ -68,6 +68,8 @@ while choice!=0:
                 buslist[f][2]=a
                 print("\n📝 Booking Ticket is Processing...")
                 buslist[f][4]=otp
+                buslist[f][5]=today
+                buslist[f][6]=now
                 time.sleep(0.5)
                 print(f"🎉 Seat {buslist[f][0]} successfully booked for {a}!")
                 print(f"You have to pay TK BDT.{buslist[f][3]}")
