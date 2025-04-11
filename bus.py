@@ -36,6 +36,7 @@ while choice!=0:
     print("1️⃣  Show Available Seats")
     print("2️⃣  Book a Ticket")
     print("3️⃣  Check Specific Ticket Details")
+    print("4️⃣  Journey Details")
     print("0️⃣  Exit")
     print("\n" + "="*40)
     choice = int(input("👉 Select Option: "))
@@ -88,6 +89,20 @@ while choice!=0:
             else:
                 print("Information doesn't match.Please Try again!")
                 print("         " + "="*20)
+    
+    elif choice == 4:
+        print("\n💌 Dear Passenger,\n")
+        print(f"🚌 Bus Route: {info[0]}  ➡️  {info[1]} ➡️  {info[2]}")
+        print("📅 Daily Schedule:\n")
+        print(" ╔════════════╦════════════╦════════════╗")
+        print(f" ║ {info[0].center(10)} ║ {info[1].center(10)} ║ {info[2].center(10)} ║")
+        print(" ╠════════════╬════════════╬════════════╣")
+        print(f" ║ {info[3].center(10)} ║ {info[4].center(10)} ║ {info[5].center(10)} ║")
+        print(" ╚════════════╩════════════╩════════════╝\n")
+
+        print("📍 Please arrive at the terminal at least 15 minutes early.")
+        print("Thank you for choosing Green Line!")
+        print("         " + "="*20)
 
     elif(choice == 0):
         exit()
