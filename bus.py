@@ -40,6 +40,7 @@ while choice!=0:
     print("3️⃣  Check Specific Ticket Details")
     print("4️⃣  Journey Details")
     print("5️⃣  Download Your Ticket")
+    print("6️⃣  Cancel a Ticket")
     print("0️⃣  Exit")
     print("\n" + "="*40)
     choice = int(input("👉 Select Option:"))
@@ -132,6 +133,26 @@ while choice!=0:
                 break
         if flag==False:
             print("⚠ invalid username & passward")
+    
+    elif choice == 6:
+        print("\n🗑 Cancel a Ticket")
+        tic = int(input("🎫 Enter Seat Number to Cancel: "))
+        otp=input("Enter Your 4 digit passward:")
+        flag=False
+        for i in range(b):
+            if buslist[tic-1][4]==otp:
+                flag=True
+                print("✅ OTP Match. Please wait for confirmation...")
+                time.sleep(0.5)
+                print(f"🧑‍ Dear {buslist[tic-1][2]}")
+                print(f"✅ Ticket for Seat {buslist[tic-1][0]} has been cancelled.")
+                print(f"You will get TK BDT.{buslist[tic-1][3]}")
+                print("         " + "="*20)
+                buslist[tic-1][2] = None
+                buslist[tic-1][4] = None
+                break
+        if flag==False:
+            print("⚠ OTP Didn't Match!")
     
 
     elif(choice == 0):
